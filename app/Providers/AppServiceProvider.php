@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Spatie\Mailcoach\Http\Api\Controllers\Campaigns\CampaignsController;
+use Spatie\Mailcoach\Http\App\Queries\CampaignsQuery;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('Spatie\Mailcoach\Http\App\Queries\CampaignsQuery', 'App\Queries\CampaignsQuery');
+        // $this->app->when(CampaignsController::class)
+        //   ->needs(CampaignsQuery::class)
+        //   ->give(\App\Queries\CampaignsQuery::class);
     }
 
     /**
