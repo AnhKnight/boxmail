@@ -34,5 +34,5 @@ class CampaignsQuery extends QueriesCampaignsQuery
                 AllowedFilter::custom('search', new FuzzyFilter('name')),
                 AllowedFilter::custom('status', new CampaignStatusFilter())
             );
-    }   
+    }
 }
