@@ -10,7 +10,7 @@ trait BelongsToUser
 {
     public static function bootBelongsToUser(): void
     {
-        static::saving(function ($model) {
+        static::creating(function ($model) {
             $model->user()->associate(request()->user());
         });
 

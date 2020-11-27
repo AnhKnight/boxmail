@@ -16,13 +16,19 @@ class CampaignResource extends ResourcesCampaignResource
      */
     public function toArray($request)
     {
+        $emailList = $this->emailList;
+        $subscriberCount = 0;
+        if ($emailList) {
+            $subscriberCount = $emailList->subscribers()->count();
+        }
         return [
             'id' => $this->id,
             'name' => $this->name,
             'uuid' => $this->uuid,
 
             'email_list_id' => (int)$this->email_list_id,
-            'email_list' => new EmailListResource($this->whenLoaded('emailList')),
+            'email_list' => new EmailListResource($this->emailList),
+            'subscriber_count' => $subscriberCount,
 
             'segment' => new SegmentResource($this->whenLoaded('segment')),
 

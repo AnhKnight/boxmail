@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Mailcoach\Http\Actions;
+namespace App\Http\Actions;
 
 use Spatie\Mailcoach\Actions\Campaigns\UpdateCampaignAction as CampaignsUpdateCampaignAction;
 use Spatie\Mailcoach\Models\Campaign;
@@ -25,6 +25,7 @@ class UpdateCampaignAction extends CampaignsUpdateCampaignAction
             'email_list_id' => $attributes['email_list_id'] ?? optional($this->getEmailListClass()::orderBy('name')->first())->id,
             'segment_class' => $segmentClass,
             'segment_description' => (new $segmentClass)->description(),
+            'scheduled_at' => $attributes['schedule_at'] ?? null
         ]);
 
         $campaign->save();
