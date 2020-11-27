@@ -592,26 +592,29 @@
         },
         {
             "name": "dragonmantank/cron-expression",
-            "version": "v3.0.2",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dragonmantank/cron-expression.git",
-                "reference": "48212cdc0a79051d50d7fc2f0645c5a321caf926"
+                "reference": "7a8c6e56ab3ffcc538d05e8155bb42269abf1a0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/48212cdc0a79051d50d7fc2f0645c5a321caf926",
-                "reference": "48212cdc0a79051d50d7fc2f0645c5a321caf926",
+                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/7a8c6e56ab3ffcc538d05e8155bb42269abf1a0c",
+                "reference": "7a8c6e56ab3ffcc538d05e8155bb42269abf1a0c",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1|^8.0"
+                "php": "^7.2|^8.0",
+                "webmozart/assert": "^1.7.0"
             },
             "replace": {
                 "mtdowling/cron-expression": "^1.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.11|^0.12",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-webmozart-assert": "^0.12.7",
                 "phpunit/phpunit": "^7.0|^8.0|^9.0"
             },
             "type": "library",
@@ -638,7 +641,7 @@
             ],
             "support": {
                 "issues": "https://github.com/dragonmantank/cron-expression/issues",
-                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.0.2"
+                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.1.0"
             },
             "funding": [
                 {
@@ -646,7 +649,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-13T01:26:01+00:00"
+            "time": "2020-11-24T19:55:57+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -1331,16 +1334,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.15.0",
+            "version": "v8.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "22e4182fa0885dea3772106c3b6df705b7c7363e"
+                "reference": "f7dfc22e6c42e9ed4dda14c05814349af6943206"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/22e4182fa0885dea3772106c3b6df705b7c7363e",
-                "reference": "22e4182fa0885dea3772106c3b6df705b7c7363e",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f7dfc22e6c42e9ed4dda14c05814349af6943206",
+                "reference": "f7dfc22e6c42e9ed4dda14c05814349af6943206",
                 "shasum": ""
             },
             "require": {
@@ -1413,7 +1416,7 @@
                 "illuminate/view": "self.version"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "^3.0",
+                "aws/aws-sdk-php": "^3.155",
                 "doctrine/dbal": "^2.6|^3.0",
                 "filp/whoops": "^2.8",
                 "guzzlehttp/guzzle": "^6.5.5|^7.0.1",
@@ -1426,7 +1429,7 @@
                 "symfony/cache": "^5.1"
             },
             "suggest": {
-                "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage and SES mail driver (^3.0).",
+                "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage and SES mail driver (^3.155).",
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.6|^3.0).",
                 "ext-ftp": "Required to use the Flysystem FTP driver.",
                 "ext-gd": "Required to use Illuminate\\Http\\Testing\\FileFactory::image().",
@@ -1494,20 +1497,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2020-11-17T14:53:20+00:00"
+            "time": "2020-11-25T15:01:02+00:00"
         },
         {
             "name": "laravel/horizon",
-            "version": "v5.4.0",
+            "version": "v5.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "d08d10ee12f53b7ba2cbb938eb23857e93fe51d3"
+                "reference": "66743f65a55a71f52b5308de1a09fe5fd8453bcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/d08d10ee12f53b7ba2cbb938eb23857e93fe51d3",
-                "reference": "d08d10ee12f53b7ba2cbb938eb23857e93fe51d3",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/66743f65a55a71f52b5308de1a09fe5fd8453bcb",
+                "reference": "66743f65a55a71f52b5308de1a09fe5fd8453bcb",
                 "shasum": ""
             },
             "require": {
@@ -1569,22 +1572,22 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/horizon/issues",
-                "source": "https://github.com/laravel/horizon/tree/v5.4.0"
+                "source": "https://github.com/laravel/horizon/tree/v5.5.0"
             },
-            "time": "2020-11-03T16:55:40+00:00"
+            "time": "2020-11-24T17:09:52+00:00"
         },
         {
             "name": "laravel/sanctum",
-            "version": "v2.8.1",
+            "version": "v2.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sanctum.git",
-                "reference": "9b8cc455eadee5330d849bb3e41dc5931ccbe8ee"
+                "reference": "331bd6572610b06ad6dd6b2a7c15a0465a3ca9c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sanctum/zipball/9b8cc455eadee5330d849bb3e41dc5931ccbe8ee",
-                "reference": "9b8cc455eadee5330d849bb3e41dc5931ccbe8ee",
+                "url": "https://api.github.com/repos/laravel/sanctum/zipball/331bd6572610b06ad6dd6b2a7c15a0465a3ca9c9",
+                "reference": "331bd6572610b06ad6dd6b2a7c15a0465a3ca9c9",
                 "shasum": ""
             },
             "require": {
@@ -1635,7 +1638,7 @@
                 "issues": "https://github.com/laravel/sanctum/issues",
                 "source": "https://github.com/laravel/sanctum"
             },
-            "time": "2020-11-17T16:45:56+00:00"
+            "time": "2020-11-24T17:31:19+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -6308,16 +6311,16 @@
         },
         {
             "name": "spatie/laravel-medialibrary",
-            "version": "9.1.5",
+            "version": "9.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-medialibrary.git",
-                "reference": "fce33ddd6613f8048ef554d64e82ffa5b05204d6"
+                "reference": "21c40b4d06bd8d16c0454f553c6de4d1e35aba3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/fce33ddd6613f8048ef554d64e82ffa5b05204d6",
-                "reference": "fce33ddd6613f8048ef554d64e82ffa5b05204d6",
+                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/21c40b4d06bd8d16c0454f553c6de4d1e35aba3e",
+                "reference": "21c40b4d06bd8d16c0454f553c6de4d1e35aba3e",
                 "shasum": ""
             },
             "require": {
@@ -6396,7 +6399,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-medialibrary/issues",
-                "source": "https://github.com/spatie/laravel-medialibrary/tree/9.1.5"
+                "source": "https://github.com/spatie/laravel-medialibrary/tree/9.2.0"
             },
             "funding": [
                 {
@@ -6408,7 +6411,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-22T21:40:26+00:00"
+            "time": "2020-11-26T21:57:23+00:00"
         },
         {
             "name": "spatie/laravel-model-cleanup",
@@ -6483,29 +6486,29 @@
         },
         {
             "name": "spatie/laravel-query-builder",
-            "version": "3.3.3",
+            "version": "3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-query-builder.git",
-                "reference": "4f0569191564b86e8f69c66700eaddff674aa9b1"
+                "reference": "2e131b0c8ae600b6e3aabb5a1501c721862a0b8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-query-builder/zipball/4f0569191564b86e8f69c66700eaddff674aa9b1",
-                "reference": "4f0569191564b86e8f69c66700eaddff674aa9b1",
+                "url": "https://api.github.com/repos/spatie/laravel-query-builder/zipball/2e131b0c8ae600b6e3aabb5a1501c721862a0b8f",
+                "reference": "2e131b0c8ae600b6e3aabb5a1501c721862a0b8f",
                 "shasum": ""
             },
             "require": {
                 "illuminate/database": "^6.0|^7.0|^8.0",
                 "illuminate/http": "^6.0|^7.0|^8.0",
                 "illuminate/support": "^6.0|^7.0|^8.0",
-                "php": "^7.3"
+                "php": "^7.3|^8.0"
             },
             "require-dev": {
                 "ext-json": "*",
-                "friendsofphp/php-cs-fixer": "^2.16",
                 "laravel/legacy-factories": "^1.0.4",
-                "orchestra/testbench": "^4.0|^5.0|^6.0",
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^4.9|^5.8|^6.3",
                 "phpunit/phpunit": "^9.0"
             },
             "type": "library",
@@ -6549,7 +6552,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-10-27T16:14:34+00:00"
+            "time": "2020-11-26T14:51:30+00:00"
         },
         {
             "name": "spatie/laravel-rate-limited-job-middleware",
