@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('Spatie\Mailcoach\Http\App\Queries\CampaignsQuery', 'App\Queries\CampaignsQuery');
-        $this->app->bind('Spatie\Mailcoach\Actions\Campaigns\UpdateCampaignAction', 'Spatie\Mailcoach\Http\Actions\UpdateCampaignAction');
+        $this->app->bind('Spatie\Mailcoach\Actions\Campaigns\UpdateCampaignAction', 'Spatie\Mailcoach\Actions\Campaigns\UpdateCampaignAction');
         // $this->app->when(CampaignsController::class)
         //   ->needs(CampaignsQuery::class)
         //   ->give(\App\Queries\CampaignsQuery::class);
