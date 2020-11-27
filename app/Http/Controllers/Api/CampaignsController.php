@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\CampaignResource;
 use App\Models\Campaign;
-use Spatie\Mailcoach\Http\Api\Resources\CampaignResource;
 
 class CampaignsController
 {
