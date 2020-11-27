@@ -19,4 +19,4 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
-Route::get('campaigns/{campaign}', CampaignsController::class);
+Route::get('campaigns/{campaign}', [CampaignsController::class, 'show']);
