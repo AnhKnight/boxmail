@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CampaignsController;
+use App\Http\Controllers\Api\ResubscribeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('campaigns/{campaign}', [CampaignsController::class, 'show']);
+Route::post('subscribers/{subscriber}/resubscribe', ResubscribeController::class);
