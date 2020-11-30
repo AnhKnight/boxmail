@@ -4,8 +4,11 @@ namespace App\Providers;
 
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
+use App\Listeners\UpdateMailSent;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
+use Spatie\Mailcoach\Events\CampaignMailSentEvent;
+use Illuminate\Console\Events\ArtisanStarting;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -18,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        CampaignMailSentEvent::class => [
+            UpdateMailSent::class
+        ]
     ];
 
     /**
@@ -27,6 +33,12 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        parent::boot();
+
+        Event::listen(ArtisanStarting::class, function($app) {
+            if( isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] == 'migrate' ) {
+                \DB::statement("SET SESSION sql_require_primary_key=OFF");
+            }
+        });
     }
 }
