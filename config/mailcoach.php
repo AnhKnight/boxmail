@@ -93,7 +93,7 @@ return [
         'personalize_subject' => \Spatie\Mailcoach\Actions\Campaigns\PersonalizeSubjectAction::class,
         'retry_sending_failed_sends' => \Spatie\Mailcoach\Actions\Campaigns\RetrySendingFailedSendsAction::class,
         'send_campaign' => \Spatie\Mailcoach\Actions\Campaigns\SendCampaignAction::class,
-        'send_mail' => \Spatie\Mailcoach\Actions\Campaigns\SendMailAction::class,
+        'send_mail' => \App\Http\Actions\SendMailAction::class,
         'send_test_mail' => \Spatie\Mailcoach\Actions\Campaigns\SendTestMailAction::class,
 
         /*

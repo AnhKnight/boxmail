@@ -22,6 +22,7 @@ class CampaignRequest extends SpatieRequest
             'track_opens' => 'boolean',
             'track_clicks' => 'boolean',
             'schedule_at' => 'date_format:Y-m-d H:i:s',
+            'tenant_id' => ''
         ];
     }
 }

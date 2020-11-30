@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CampaignsController;
+use App\Http\Controllers\Api\CancelCampaginController;
 use App\Http\Controllers\Api\ResubscribeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,5 +21,7 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
+Route::get('campaigns', [CampaignsController::class, 'index']);
 Route::get('campaigns/{campaign}', [CampaignsController::class, 'show']);
+Route::post('campaigns/{campaign}/cancel', CancelCampaginController::class)->name('api.campaigns.cancel');
 Route::post('subscribers/{subscriber}/resubscribe', ResubscribeController::class);

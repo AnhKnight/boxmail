@@ -21,6 +21,7 @@ class CampaignResource extends ResourcesCampaignResource
         if ($emailList) {
             $subscriberCount = $emailList->subscribers()->count();
         }
+
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -29,6 +30,9 @@ class CampaignResource extends ResourcesCampaignResource
             'email_list_id' => (int)$this->email_list_id,
             'email_list' => new EmailListResource($this->emailList),
             'subscriber_count' => $subscriberCount,
+            'send_count' => $this->send_count ?? 0,
+            'failed_count' => $this->failed_count ?? 0,
+            'tenant_id' => $this->tenant_id,
 
             'segment' => new SegmentResource($this->whenLoaded('segment')),
 
