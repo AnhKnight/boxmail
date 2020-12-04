@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CampaignOutboxController;
 use App\Http\Controllers\Api\CampaignsController;
 use App\Http\Controllers\Api\CancelCampaginController;
 use App\Http\Controllers\Api\CheckEmailListUsedController;
@@ -25,5 +26,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('campaigns', [CampaignsController::class, 'index']);
 Route::get('campaigns/{campaign}', [CampaignsController::class, 'show']);
 Route::post('campaigns/{campaign}/cancel', CancelCampaginController::class)->name('api.campaigns.cancel');
+Route::get('campaigns/{campaign}/outbox', CampaignOutboxController::class);
 Route::post('subscribers/{subscriber}/resubscribe', ResubscribeController::class);
 Route::post('email-lists/{emailList}/check-used', CheckEmailListUsedController::class);
