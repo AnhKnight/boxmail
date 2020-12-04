@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\CampaignOutboxController;
 use App\Http\Controllers\Api\CampaignsController;
 use App\Http\Controllers\Api\CancelCampaginController;
 use App\Http\Controllers\Api\CheckEmailListUsedController;
+use App\Http\Controllers\Api\ImportSubscribersController;
 use App\Http\Controllers\Api\ResubscribeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,4 @@ Route::post('campaigns/{campaign}/cancel', CancelCampaginController::class)->nam
 Route::get('campaigns/{campaign}/outbox', CampaignOutboxController::class);
 Route::post('subscribers/{subscriber}/resubscribe', ResubscribeController::class);
 Route::post('email-lists/{emailList}/check-used', CheckEmailListUsedController::class);
+Route::get('email-lists/{emailList}/import-subscribers', [ImportSubscribersController::class, 'show']);
